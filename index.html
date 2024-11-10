@@ -158,46 +158,4 @@
 </body>
 </html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">  
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Copatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title>Baoling's Website</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-    <div class="nav-bar-vertical">
-        <div class="nav-brand"></div>
-        <ul>
-            <a href="#"><li>学什么</li></a>
-            <a href="#how"><li>怎么学</li></a>
-            <a href="#who"><li>谁来教</li></a>
-        </ul>
-    </div> 
-    <div class="container-main">
-        <div class="title">博客内容</div>
-        <div id="blog-content" class="blog-content"></div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-        async function loadBlog() {
-            try {
-                const response = await fetch('shm/Chapter 1.md');
-                if (!response.ok) throw new Error('Network response was not ok');
-                const text = await response.text();
-                document.getElementById('blog-content').innerHTML = marked(text);
-            } catch (error) {
-                console.error('Error loading blog content:', error);
-                document.getElementById('blog-content').textContent = '博客内容加载失败。';
-            }
-        }
-        
-        document.addEventListener('DOMContentLoaded', loadBlog);
-    </script>
-</body>
-</html>
