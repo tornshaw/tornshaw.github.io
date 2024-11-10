@@ -13,7 +13,7 @@
         <div class="nav-brand">Xiaotg's Blog</div>
         <ul>
             <a href="#"><li>主页</li></a>
-            <a href="#C1"><li>第一章h</li></a>
+            <a href="#C1"><li>第一章</li></a>
             <a href="#C2"><li>第二章</li></a>
         </ul>
     </div>
@@ -32,7 +32,7 @@
     <script>
         async function loadBlogContent() {
             try {
-                const response = await fetch('shm/Chapter 1.md');
+                const response = await fetch('shm/Chapter1.md');
                 if (!response.ok) throw new Error('无法加载博客内容');
                 
                 const markdownText = await response.text();
